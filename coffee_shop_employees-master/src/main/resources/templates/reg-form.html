@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration-Form</title>
+    <link rel="stylesheet" th:href="@{reg-form-style.css}" />
+</head>
+<body>
+    <h1 id="create"><b>Create An Account</b></h1>
+    <div class="RegistrationForm">
+       
+    <form th:action="pdata" th:object="${loginkey}" method="post">
+        
+        <label for="Name">Name:&ensp;</label><br>
+        <input type="text" th:field="${loginkey.name}" id="name" value ="firstname" placeholder="Enter Your Name" required><br>
+        
+        <label for="Age">Age:&ensp;</label><br>
+        <div th:if="${loginkey.age <= 18}">
+            
+        </div>
+        <div th:if="${loginkey.age >= 19}">
+            <input type="text" th:field="${loginkey.age}" id="Age" value="Age">
+        </div>
+        <br>
+
+        <label for="Gender">Select Your Gender&ensp;</label><br>
+        <label for="male">male</label>
+        <input type="radio" value="gender" id="male" th:field="${loginkey.gender}"required>
+        <label for="female">female</label>
+        <input type="radio" value="gender" id="female" th:field="${loginkey.gender}"required>
+        <label for="other">other</label>
+        <input type="radio" value="gender" id="other" th:field="${loginkey.gender}"required>
+
+        <br><label for="DateOfBirth">DateOfBirth</label><br>
+        <input type="date" id="dateofbirth" value="DateOfBirth" th:field="${loginkey.dob}" required>
+        
+        <br><label for="Cellnumber">ContactNumber&ensp;</label><br>
+        <select name="cellnumber" id="countrycode">
+        <option value="+92" id="countrycode">+92</option>
+        <option value="+971" id="countrycode">+971</option>
+        <option value="+91" id="countrycode">+91</option>
+        <option value="+96" id="countrycode">+96</option>
+        <option value="+1" id="countrycode">+1</option></select>
+        <input type="tel" th:field="${loginkey.contactnumber}" id="cellnumber" value="cellnumber" placeholder="3162045633" required>        
+        
+        <br><label for="email">email</label><br>
+        <input type="email" th:field="${loginkey.email}" placeholder="example@gmail.com" id="email" value="email" required>
+        
+        <br><label for="password">Password</label><br>
+        <input type="password" id="password" value="password" th:field="${loginkey.password}" placeholder="***********" required>
+
+        <br><input type="submit" value="submit" id="submit">
+    </form> 
+    </div>
+</body>
+</html>
