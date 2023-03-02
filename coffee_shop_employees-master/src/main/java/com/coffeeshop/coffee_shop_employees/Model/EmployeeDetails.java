@@ -15,6 +15,6 @@ public class EmployeeDetails {
     private String password;
     private long contactnumber;
     private String gender;
-  
+    private String me;
     
 }
