@@ -10,11 +10,14 @@
 
 <body>
     <div class="HomePageNavigationBar">
-    <nav>      
-    <a th:href="@{/Registrationform}" id="reg">Registration</a>
-    <a th:href="@{/home}">home</a>  
-    <a th:href="@{/SignInPage}">Sign In</a>  
-    </nav>    
-</div>
+    <header>
+        <nav class="Navigation">      
+            <ul>
+                <li><a th:href="@{/Registrationform}" id="reg">Registration</a> </li>
+                <li> <a th:href="@{/home}">home</a> </li>
+            </ul>    
+        </nav>
+    </header>    
+    </div>
 </body>
 </html>
