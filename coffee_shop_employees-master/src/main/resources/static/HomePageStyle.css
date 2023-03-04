@@ -1,9 +1,19 @@
-.HomePageNavigationBar{
-   background-color: teal;
-   padding: 20px;
-   margin: auto;    
+body{
+    background-color: chocolate;
 }
-a{
-    text-decoration: none;
-    margin: 2px;
+.HomePageNavigationBar{
+   background-color: brown;
+   padding: 15px;
+   margin: auto; 
+   height: 20px;  
+   border-radius: 15px; 
+}
+.Navigation li{
+    float: left;
+    list-style: none;
+}
+.Navigation li a{
+    padding: 0px 5px;
+    color: bisque;
+    text-transform: uppercase;
 }
