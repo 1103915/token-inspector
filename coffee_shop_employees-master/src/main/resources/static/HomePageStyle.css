@@ -1,19 +1,26 @@
 body{
-    background-color: chocolate;
+    background-color: rgba(211, 155, 155, 0.651);
 }
 .HomePageNavigationBar{
-   background-color: brown;
-   padding: 15px;
-   margin: auto; 
-   height: 20px;  
+   background-color: rgb(168, 129, 129);
+   
+ height: 34px;
    border-radius: 15px; 
+    margin: -16px -6px;
 }
+
 .Navigation li{
     float: left;
     list-style: none;
+    margin: 9px 6px;
 }
 .Navigation li a{
-    padding: 0px 5px;
+    padding: 1px 5px;
     color: bisque;
     text-transform: uppercase;
+    text-decoration: none;
+    
+}
+.Navigation li a:before{
+    color: black;
 }
