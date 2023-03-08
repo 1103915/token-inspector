@@ -34,11 +34,11 @@ public class EmployeePageController {
         firstService.AddDetails(firstdetail);
         return "redirect:/home";
     }
-    @GetMapping("/SignInPage")
+ /*   @GetMapping("/SignInPage")
         public ModelAndView login(){
             ModelAndView view2 = new ModelAndView("LoginPage");
             view2.addObject("SignInKey",secondservice.GetLoginDetails());
             return view2;
-        }
+        }  */
        
 }
