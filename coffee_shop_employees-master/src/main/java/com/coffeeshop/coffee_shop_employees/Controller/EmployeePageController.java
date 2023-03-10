@@ -11,7 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.coffeeshop.coffee_shop_employees.Model.EmployeeDetails;
 import com.coffeeshop.coffee_shop_employees.Service.EmployeeService;
 import com.coffeeshop.coffee_shop_employees.Service.SignInPageService;
-
+import com.coffeeshop.coffee_shop_employees.Model.SignInPage;
 @Controller
 public class EmployeePageController {
     @Autowired
@@ -32,13 +32,16 @@ public class EmployeePageController {
     @PostMapping("/pdata")
     public String postdata(@ModelAttribute EmployeeDetails firstdetail){
         firstService.AddDetails(firstdetail);
+        return "redirect:/SignInPage";
+    }
+   @GetMapping("/SignInPage") 
+        public String page(Model model){
+            model.addAttribute("SignKey",new SignInPage());
+           
+            return "LoginPage";    
+        } 
+    @GetMapping("/Page")
+    public String getreq(){
         return "redirect:/home";
     }
- /*   @GetMapping("/SignInPage")
-        public ModelAndView login(){
-            ModelAndView view2 = new ModelAndView("LoginPage");
-            view2.addObject("SignInKey",secondservice.GetLoginDetails());
-            return view2;
-        }  */
-       
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,13 +7,13 @@
   <title>Sign In</title>
 </head>
 <body>
-  <form th:action="SignInPage" method="get" th:object="${SignInKey}">
+  <form th:action="Page" method="get" th:object="${SignKey}">
     <label for="email">Email:</label>
     <br>
-    <input type="email" th:field="${SignInKey.email}" id="email">
+    <input type="email" th:field="${SignKey.email}" id="email" required><br>
     <label for="password">Password:</label>
     <br>
-    <input type="password" th:field="${SignInKey.password}" id="password">
+    <input type="password" th:field="${SignKey.password}" id="password" required>
     <br>
     <input type="submit" value="SignIn">
   </form>
