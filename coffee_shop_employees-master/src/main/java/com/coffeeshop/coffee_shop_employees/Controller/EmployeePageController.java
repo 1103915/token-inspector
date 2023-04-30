@@ -6,10 +6,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.coffeeshop.coffee_shop_employees.Model.EmployeeDetails;
 import com.coffeeshop.coffee_shop_employees.Service.EmployeeService;
+import com.coffeeshop.coffee_shop_employees.Service.EmployeeServiceH2;
 import com.coffeeshop.coffee_shop_employees.Service.SignInPageService;
 import com.coffeeshop.coffee_shop_employees.Model.SignInPage;
 @Controller
@@ -18,30 +20,34 @@ public class EmployeePageController {
     EmployeeService firstService;
     @Autowired
     SignInPageService secondservice;
-    @GetMapping("/home")
+    @Autowired
+    EmployeeServiceH2 runtEmployeeServiceH2;
+    SignInPage p1 = new SignInPage();
+
+  /*  @GetMapping("/home")
     public ModelAndView homepage(){
         ModelAndView m1 = new ModelAndView("HomePage");
         m1.addObject(firstService.GetDetails());
         return m1;
-    }
+    } */
     @GetMapping("/Registrationform")
     public String form(Model model){
         model.addAttribute("loginkey",new EmployeeDetails());
         return "reg-form";
     }
     @PostMapping("/pdata")
-    public String postdata(@ModelAttribute EmployeeDetails firstdetail){
-        firstService.AddDetails(firstdetail);
+    public String postdata(@RequestBody EmployeeDetails firstdetail){
+        firstService.CreateNewUser(firstdetail);
         return "redirect:/SignInPage";
     }
    @GetMapping("/SignInPage") 
         public String page(Model model){
-            model.addAttribute("SignKey",new SignInPage());
-           
+            
+            model.addAttribute("SignKey",p1);
             return "LoginPage";    
         } 
     @GetMapping("/Page")
-    public String getreq(){
-        return "redirect:/home";
+    public EmployeeDetails getreq(EmployeeDetails detail){
+    return runtEmployeeServiceH2.save(detail);        
     }
 }

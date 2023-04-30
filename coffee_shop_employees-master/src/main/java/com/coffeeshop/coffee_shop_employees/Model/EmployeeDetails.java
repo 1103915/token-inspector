@@ -2,19 +2,31 @@ package com.coffeeshop.coffee_shop_employees.Model;
 
 import org.springframework.stereotype.Component;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Table;
+
 
 
 @Component
-
+@Table(name="EmployeeTable")
 public class EmployeeDetails {
+    @Column
     private String name;
+    @Column
     private int age;
+    @Column
     private String dob;
+    @Column
     private String shift;
+    @Column
     protected String email;
+    @Column
     protected String password;
+    @Column
     private long contactnumber;
+    @Column
     private String gender;
+    @Column
     private String me;
     
     public String getName() {
