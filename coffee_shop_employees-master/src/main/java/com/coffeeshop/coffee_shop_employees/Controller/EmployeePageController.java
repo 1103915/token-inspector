@@ -44,4 +44,12 @@ public class EmployeePageController {
     public String getreq(){
         return "redirect:/home";
     }
+    @GetMapping("/about")
+    public String aboutpage(){
+        return "chatGptAboutPage";
+    }
+    @GetMapping("/test")
+    public String testpage(){
+        return "testfile2";
+    }
 }
