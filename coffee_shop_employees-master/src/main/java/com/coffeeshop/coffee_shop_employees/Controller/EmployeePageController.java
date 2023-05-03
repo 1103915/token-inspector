@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.coffeeshop.coffee_shop_employees.Model.EmployeeDetails;
+import com.coffeeshop.coffee_shop_employees.Model.HomePage;
 import com.coffeeshop.coffee_shop_employees.Service.EmployeeService;
 import com.coffeeshop.coffee_shop_employees.Service.SignInPageService;
 import com.coffeeshop.coffee_shop_employees.Model.SignInPage;
@@ -49,7 +50,8 @@ public class EmployeePageController {
         return "chatGptAboutPage";
     }
     @GetMapping("/test")
-    public String testpage(){
-        return "testfile2";
+    public String testpage(Model model){
+        model.addAttribute("homekey", new HomePage());
+        return "TestFile1";
     }
 }
