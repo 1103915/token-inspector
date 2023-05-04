@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HomePage</title>
     <link rel="stylesheet" th:href="@{HomePageStyle.css}">
+   
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" href="charizard.png" type="image/x-icon">
 </head>
 
 <body>
@@ -19,18 +22,13 @@
         </nav>
     </header>    
     </div>
-    <div class="box">
-        <a th:href="@{/Registrationform}">
-            <img src="images/coffee.jpg" alt="coffee" height="200" width="200">
-        </a>
-        <a th:href="@{/Registrationform}">
-            <img src="images/coffee.jpg" alt="coffee" height="200" width="200">
-        </a>
-        <a th:href="@{/Registrationform}">
-            <img src="images/coffee.jpg" alt="coffee" height="200" width="200">
-        </a>
-        
+   
+    <div class="search-bar" style="left: 20px;">
+        <input type="text">
+        <div class="actions">
+            <button><span class="material-icons">mic</span></button>
+            <button><span class="material-icons">search</span></button>
+        </div>
     </div>
-    
 </body>
 </html>
