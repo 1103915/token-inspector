@@ -161,3 +161,15 @@ body{
 .footer .copyright{
 	color: #999;	
 }
+input[type="submit" i] {
+   
+    align-items: flex-start;
+    text-align: center;
+    cursor: auto;
+    padding: 1px 6px;
+    border: none;
+    background: none;
+    font-size: medium;
+    font-style: normal;
+
+}

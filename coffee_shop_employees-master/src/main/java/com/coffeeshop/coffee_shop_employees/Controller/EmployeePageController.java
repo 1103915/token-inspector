@@ -50,8 +50,12 @@ public class EmployeePageController {
         return "chatGptAboutPage";
     }
     @GetMapping("/test")
-    public String testpage(){
-      //  model.addAttribute("homekey", new HomePage()); 
+    public String testpage(Model model){
+        model.addAttribute("LoginKey", new SignInPage()); 
         return "LoginTest";
+    }
+    @PostMapping("/Home")
+    public String HomePost(){
+        return "redirect:/home";
     }
 }
