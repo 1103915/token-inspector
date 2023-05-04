@@ -52,6 +52,6 @@ public class EmployeePageController {
     @GetMapping("/test")
     public String testpage(){
       //  model.addAttribute("homekey", new HomePage()); 
-        return "Searchbox";
+        return "LoginTest";
     }
 }
