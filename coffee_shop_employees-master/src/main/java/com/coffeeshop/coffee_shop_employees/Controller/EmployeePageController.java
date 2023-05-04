@@ -50,8 +50,8 @@ public class EmployeePageController {
         return "chatGptAboutPage";
     }
     @GetMapping("/test")
-    public String testpage(Model model){
-        model.addAttribute("homekey", new HomePage());
-        return "TestFile1";
+    public String testpage(){
+      //  model.addAttribute("homekey", new HomePage()); 
+        return "Searchbox";
     }
 }
