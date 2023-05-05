@@ -58,4 +58,8 @@ public class EmployeePageController {
     public String HomePost(){
         return "redirect:/home";
     }
+    @GetMapping("/personalInfo")
+    public String pinfo(){
+        return "Personal_Info";
+    }
 }
