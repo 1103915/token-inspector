@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.coffeeshop.coffee_shop_employees.Model.EmployeeDetails;
-import com.coffeeshop.coffee_shop_employees.Model.HomePage;
 import com.coffeeshop.coffee_shop_employees.Service.EmployeeService;
 import com.coffeeshop.coffee_shop_employees.Service.SignInPageService;
 import com.coffeeshop.coffee_shop_employees.Model.SignInPage;
@@ -61,5 +60,9 @@ public class EmployeePageController {
     @GetMapping("/personalInfo")
     public String pinfo(){
         return "Personal_Info";
+    }
+    @GetMapping("/reg")
+    public String regform(){
+        return "RegistrationForm#2";
     }
 }

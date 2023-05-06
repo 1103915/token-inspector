@@ -1,12 +1,11 @@
 body{
-    background-color: rgba(211, 155, 155, 0.651);
+    background-color: #fafafa;
 }
 .HomePageNavigationBar{
-   background-color: rgb(168, 129, 129);
-   
- height: 34px;
-   border-radius: 15px; 
-    margin: -16px -6px;
+   background-color: #8d8282;
+   height: 34px;
+   border-radius: 5px;
+   margin: -16px -6px;
 }
 
 .Navigation li{
@@ -74,6 +73,7 @@ body{
 body{
     font-family: sans-serif;
     box-sizing: border-box;
+    background-color: #fafafa;
     /*display: flex;*/
     justify-content: center;
     align-self: center;

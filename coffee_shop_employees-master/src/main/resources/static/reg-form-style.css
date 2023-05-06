@@ -1,28 +1,29 @@
-
 .RegistrationForm{
-  font-size: 13pt;
-  padding: 0px;/*used for inside space*/
-  margin: auto;/*always set margin to auto for center alignment*/ /*used for outside space*/
-  border: 2px solid;
-  width: 180pt;
-  font-family: Arial, Helvetica, sans-serif;
-  /* From https://css.glass */
-background: rgba(209, 208, 175, 0);
-/*border-radius: 18px;*/
-box-shadow: 0 4px 30px rgba(122, 78, 78, 0.541);
-backdrop-filter: blur(0.11px);
--webkit-backdrop-filter: blur(0.5px);
-border: 1px solid rgba(209, 208, 175, 0.25);
-background-image: url(gold-textured-background.jpg);
+  padding-left: 263px;
+  border: outset 8px;
+  margin: 88px 252px;
+  /* aspect-ratio: 4/7; */
+  box-sizing: 0px;
+  box-shadow: 1px 1px 14px 0px darkgray;
+  box-sizing: 3px 4px;
+  transform: scale(1.5);
+  -webkit-transform-origin-x: center;
+}
 
+#submit{/* margin: 35px; *//* padding: 37px; */position: 44px;left: 12px;justify-content: center;}
+input , select{border: outset;}
+body{font-family: roboto,"Noto Sans Myanmar UI",arial,sans-serif;padding-left: 92px;padding-right: 68px;background-color: #fafafa;}
+h1{
+    padding-left: 335px;
+    margin-left: 151px;
+    /* margin-top: 14px; */
+    justify-content: center;
+    padding-top: 10px;
+    font-family: roboto,"Noto Sans Myanmar UI",arial,sans-serif;
+    /* justify-content: center; */
 }
-#submit{
-  color: white;
-  background-color: black;
-  height: 14pt;
-  border-radius: 15px;
-  font-size: 8pt;
-}
-input{
-  border-radius: 20px;
+
+option{
+  /* border: outset; */
+  /* padding: 70px; */
 }

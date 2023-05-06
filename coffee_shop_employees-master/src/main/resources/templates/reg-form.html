@@ -14,13 +14,13 @@
     <form th:action="pdata" th:object="${loginkey}" method="post">
         
         <label for="Name">Name:&ensp;</label><br>
-        <input type="text" th:field="${loginkey.name}" id="name" value ="firstname" placeholder="Enter Your Name" required><br>
+        <input type="text" th:field="${loginkey.name}" id="name" value ="firstname" placeholder="Enter Your Name"><br>
         
         <label for="Age">Age:&ensp;</label><br>
         <div th:if="${loginkey.age <= 18}">
             
         </div>
-        <div th:if="${loginkey.age >= 19}">
+        <div>
             <input type="text" th:field="${loginkey.age}" id="Age" value="Age">
         </div>
         <br>
