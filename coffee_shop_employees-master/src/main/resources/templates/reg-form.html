@@ -14,7 +14,7 @@
     <form th:action="pdata" th:object="${loginkey}" method="post">
         
         <label for="Name">Name:&ensp;</label><br>
-        <input type="text" th:field="${loginkey.name}" id="name" value ="firstname" placeholder="Enter Your Name"><br>
+            <input type="text" th:field="${loginkey.name}" id="name" value ="firstname" placeholder="Enter Your Name"><br>
         
         <label for="Age">Age:&ensp;</label><br>
         <div th:if="${loginkey.age <= 18}">

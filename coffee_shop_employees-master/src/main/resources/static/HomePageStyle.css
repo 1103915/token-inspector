@@ -78,9 +78,10 @@ body{
     justify-content: center;
     align-self: center;
     height: 100%;
+    /* padding-top: 50px; */
 }
 .search-bar{
-    border: solid 3px #a37e7e;
+    border: solid 3px #e4bfbf;
     border-radius: 44px;
     display: flex;
     flex-direction: row;
@@ -119,4 +120,30 @@ body{
 }
 .search-bar .actions button:hover{
     color: rgb(19, 77, 92);
+}
+.footer{
+	max-width: 935px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 40px 0;
+	display: flex;
+	justify-content: space-between;
+	padding-top: 65px;
+}
+
+.footer .links ul li{
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.footer .links ul li a{
+	color: #003569;
+	font-size: 12px;
+}
+
+.footer .copyright{
+	color: #999;	
+}
+.copyright{
+    padding-top: 18px;
 }

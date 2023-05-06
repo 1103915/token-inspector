@@ -36,33 +36,23 @@ public class EmployeePageController {
     }
    @GetMapping("/SignInPage") 
         public String page(Model model){
-            model.addAttribute("SignKey",new SignInPage());
+            model.addAttribute("LoginKey",new SignInPage());
            
             return "LoginPage";    
-        } 
-    @GetMapping("/Page")
-    public String getreq(){
-        return "redirect:/home";
-    }
+        }
+        @PostMapping("/Home")
+        public String HomeRedirect(){
+            return "redirect:/home";
+        }    
+    @GetMapping("/Sign-up")
+        public String SignUp_in_SignIn(){
+            return "redirect:/Registrationform";
+        }
     @GetMapping("/about")
     public String aboutpage(){
-        return "chatGptAboutPage";
+        return "AboutPage";
     }
-    @GetMapping("/test")
-    public String testpage(Model model){
-        model.addAttribute("LoginKey", new SignInPage()); 
-        return "LoginTest";
-    }
-    @PostMapping("/Home")
-    public String HomePost(){
-        return "redirect:/home";
-    }
-    @GetMapping("/personalInfo")
-    public String pinfo(){
-        return "Personal_Info";
-    }
-    @GetMapping("/reg")
-    public String regform(){
-        return "RegistrationForm#2";
-    }
+   
+  
+    
 }
