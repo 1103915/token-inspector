@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.coffeeshop.coffee_shop_employees.Model.EmployeeDetails;
-import com.coffeeshop.coffee_shop_employees.Model.HomePage;
+
 import com.coffeeshop.coffee_shop_employees.Service.EmployeeService;
 import com.coffeeshop.coffee_shop_employees.Service.SignInPageService;
 import com.coffeeshop.coffee_shop_employees.Model.SignInPage;
@@ -37,7 +37,7 @@ public class EmployeePageController {
     }
    @GetMapping("/SignInPage") 
         public String page(Model model){
-            model.addAttribute("SignKey",new SignInPage());
+            model.addAttribute("LoginKey",new SignInPage());
            
             return "LoginPage";    
         } 
@@ -45,20 +45,22 @@ public class EmployeePageController {
     public String getreq(){
         return "redirect:/home";
     }
-    @GetMapping("/about")
-    public String aboutpage(){
-        return "chatGptAboutPage";
-    }
-    @GetMapping("/test")
-    public String testpage(Model model){
-        model.addAttribute("LoginKey", new SignInPage()); 
-        return "LoginTest";
-    }
+    
+   
     @PostMapping("/Home")
     public String HomePost(){
         return "redirect:/home";
  
     }
+    @GetMapping("/Sign-up")
+    public String SignupFromLogin(){
+        return "redirect:/Registrationform";
+    }
+    @GetMapping("/about")
+    public String aboutpage(){
+        return "AboutPage";
+    }
+    
     @GetMapping("/token")
     public String token(){
         return "TokenPage";
@@ -67,4 +69,5 @@ public class EmployeePageController {
     public String car(){
         return "CarRegistration";
     }
+
 }
