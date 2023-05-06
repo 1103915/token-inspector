@@ -45,16 +45,22 @@ public class EmployeePageController {
     public String getreq(){
         return "redirect:/home";
     }
-    @GetMapping("/about")
-    public String aboutpage(){
-        return "AboutPage";
-    }
+    
    
     @PostMapping("/Home")
     public String HomePost(){
         return "redirect:/home";
  
     }
+    @GetMapping("/Sign-up")
+    public String SignupFromLogin(){
+        return "redirect:/Registrationform";
+    }
+    @GetMapping("/about")
+    public String aboutpage(){
+        return "AboutPage";
+    }
+    
     @GetMapping("/token")
     public String token(){
         return "TokenPage";
