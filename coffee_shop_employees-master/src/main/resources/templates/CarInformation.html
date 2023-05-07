@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,23 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="CarInfo" th:object="${carInfo}" method="post">
- 
-    <h1>Car Information</h1>
-    <ul>
-        <li>Plate Number: ${carInfo.plateNumber}</li>
-        <li>Model Number: ${carInfo.modelNumber}</li>
-
-        <li>Engine Number: ${carInfo.engineNumber}</li>
-        <li>Engine Number: ${carInfo.ChasesNumber}</li>
-
-        <li>Color: ${carInfo.color}</li>
-     
-
-    </ul>
-    <a href="home">Submit</a>
     
+        <table border="2">
+            <tr>
+            <th>plateNumber</th>
+            <th>modelNumber</th>
+            <th>EngineNumber</th>
+            <th>ChasesNumber</th>
+            </tr>
+            <tr th:each="s:${cinfo}">
+                <td th:text="${s.plateNumber}"></td>
+            </tr>
+        </table>
 
-</form>
 </body>
 </html>

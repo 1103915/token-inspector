@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,36 +7,25 @@
     <title>Car Registration System</title>
 </head>
 <body>
-<form action="/CarInfo" >  
-        <table border="2">
-           <h1>Enter Car Information</h1>
-            
-            <tr>
-                <td>
-                    
-        <label for="plateNumber">Car Plate Number:</label><br>
-        <input type="text"  id="plateNumber" name="plateNumber" placeholder="Enter Plate Number"><br>
+<form th:action="postcardata" method="post" th:object="${info}">
+    
+    <label for="plateNumber">Car Plate Number:</label><br>
+    <input type="text"  id="plateNumber" name="plateNumber" placeholder="Enter Plate Number" th:field="${info.plateNumber}"><br>
+    
+    <label for="modelNumber">Car Model Number:</label><br>
+    <input type="text"  id="modelNumber" name="modelNumber" placeholder="Enter Model Number" th:field="${info.modelNumber}"><br>
+    
+    <label for="engineNumber">Car Engine Number:</label><br>
+    <input type="text"  id="engineNumber" name="engineNumber" placeholder="Enter Engine Number" th:field="${info.engineNumber}"><br> 
+    
+    <label for="ChasesNumber">Car Chases Number:</label><br>
+    <input type="text"  id="ChasesNumber" name="ChasesNumber" placeholder="Enter Chases Number" th:field="${info.ChasesNumber}"><br>
+    
+    <label for="color">Car Colour:</label><br>
+    <input type="text"  id="color" name="color" placeholder="Enter Colour" th:field="${info.color}"><br>
 
-        <label for="modelNumber">Car Model Number:</label><br>
-        <input type="text"  id="modelNumber" name="modelNumber" placeholder="Enter Model Number"><br>
-
-        <label for="engineNumber">Car Engine Number:</label><br>
-        <input type="text"  id="engineNumber" name="engineNumber" placeholder="Enter Engine Number"><br> 
-
-        <label for="ChasesNumber">Car Chases Number:</label><br>
-        <input type="text"  id="ChasesNumber" name="ChasesNumber" placeholder="Enter Chases Number"><br>
-
-        <label for="color">Car Colour:</label><br>
-        <input type="text"  id="color" name="color" placeholder="Enter Colour"><br>
-          
-         
-        </td>
-
-        </tr>
-        
-        </table>
-        <input type="submit" value="Done">
-    </form>  
+    <input type="Submit" value="Submit">
+</form>  
         
     
 

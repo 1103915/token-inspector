@@ -10,7 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.coffeeshop.coffee_shop_employees.Model.CarRegistraionDetails;
 import com.coffeeshop.coffee_shop_employees.Model.EmployeeDetails;
-
+import com.coffeeshop.coffee_shop_employees.Service.CarRegistrationService;
 import com.coffeeshop.coffee_shop_employees.Service.EmployeeService;
 import com.coffeeshop.coffee_shop_employees.Service.SignInPageService;
 import com.coffeeshop.coffee_shop_employees.Model.SignInPage;
@@ -20,6 +20,8 @@ public class EmployeePageController {
     EmployeeService firstService;
     @Autowired
     SignInPageService secondservice;
+    @Autowired
+    CarRegistrationService thirdService;
     @GetMapping("/home")
     public ModelAndView homepage(){
         ModelAndView m1 = new ModelAndView("HomePage");
@@ -70,15 +72,21 @@ public class EmployeePageController {
 
 
     @GetMapping("/car")
-    public String car() {
+    public String car(Model model) {
+        
+        model.addAttribute("info",new CarRegistraionDetails());
         return "CarRegistration";
     }
-
+    @PostMapping("/postcardata")
+    public String postdata(@ModelAttribute CarRegistraionDetails detail){
+        thirdService.AddDetails(detail);
+        return "redirect:/CarInfo";
+    }
     @GetMapping("/CarInfo")
-    public String showCarInfo(Model model) {
-        CarRegistraionDetails carinfo = new CarRegistraionDetails();
-        model.addAttribute("carInfo", carinfo);
-        return "CarInformation";
+    public ModelAndView showCarInfo() {
+        ModelAndView m1 = new ModelAndView("CarInformation");
+        m1.addObject("cinfo", thirdService.getdetails());
+        return m1;
     }
 }
 
