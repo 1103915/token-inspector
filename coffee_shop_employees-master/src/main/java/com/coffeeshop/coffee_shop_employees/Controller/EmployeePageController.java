@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.coffeeshop.coffee_shop_employees.Model.CarRegistraionDetails;
 import com.coffeeshop.coffee_shop_employees.Model.EmployeeDetails;
 
 import com.coffeeshop.coffee_shop_employees.Service.EmployeeService;
@@ -65,9 +66,20 @@ public class EmployeePageController {
     public String token(){
         return "TokenPage";
     }
+
+
+
     @GetMapping("/car")
-    public String car(){
+    public String car() {
         return "CarRegistration";
     }
 
+    @GetMapping("/CarInfo")
+    public String showCarInfo(Model model) {
+        CarRegistraionDetails carinfo = new CarRegistraionDetails();
+        model.addAttribute("carInfo", carinfo);
+        return "CarInformation";
+    }
 }
+
+
