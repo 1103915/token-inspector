@@ -1,0 +1,29 @@
+input[type="text"]{
+    padding-bottom: 0px;
+    padding-top: 0px;
+    margin-top: -1px;
+    border-block-width: 2px;
+    border-radius: 10px;
+    height: 23px;
+    width: 160px;
+}
+.formstyle{padding-left: 552px;padding-top: 60px;/* margin: 8px; */}
+.input-2{
+    /* margin: 0px; */
+    padding-top: 10px;
+}
+.input-3{
+    /* margin: 0px; */
+    padding-top: 10px;
+}
+.input-4{
+    /* margin: 0px; */
+    padding-top: 10px;
+}
+.input-5{
+    /* margin: 0px; */
+    padding-top: 10px;
+}
+label{
+    padding-bottom: 4px;
+}
