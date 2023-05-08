@@ -88,6 +88,10 @@ public class EmployeePageController {
         m1.addObject("cinfo", thirdService.getdetails());
         return m1;
     }
+    @GetMapping("/test")
+    public String testfile(){
+        return "test";
+    }
 }
 
 

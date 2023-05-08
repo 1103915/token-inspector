@@ -9,11 +9,17 @@
   transform: scale(1.5);
   -webkit-transform-origin-x: center;
   /* -webkit-mask-position-y: 6px; */
+  line-height: normal;
 }
 
 #submit{/* margin: 35px; *//* padding: 37px; */position: 44px;left: 12px;justify-content: center;}
 input , select{border: outset;}
-body{font-family: roboto,"Noto Sans Myanmar UI",arial,sans-serif;padding-left: 92px;padding-right: 68px;background-color: #fafafa;}
+body{
+  font-family: roboto,"Noto Sans Myanmar UI",arial,sans-serif;
+  padding-left: 92px;
+  padding-right: 68px;
+  background-color: #fafafa;
+  }
 h1{
     padding-left: 335px;
     margin-left: 119px;
@@ -23,4 +29,12 @@ h1{
     font-family: roboto,"Noto Sans Myanmar UI",arial,sans-serif;
     /* justify-content: center; */
     /* margin: 105px; */
+}
+.submitbutton{
+  /* padding: 3px; */
+  margin-left: 54px;
+  margin-top: 3px;
+  padding-bottom: 0px;
+  padding-left: 8px;
+  padding-right: 10px;
 }
