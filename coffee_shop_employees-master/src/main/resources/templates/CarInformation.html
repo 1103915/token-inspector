@@ -29,19 +29,28 @@
         <table id="RegisteredCars" class="table table-striped" style="width:100%">
                 <thead>
                     <tr>
-                        <th>VehicleName</th>
-                        <th>Color</th>
+                        <th>plateNumber</th>
                         <th>modelNumber</th>
                         <th>EngineNumber</th>
                         <th>ChasesNumber</th>
+                        <th>Color</th>
+                        <th>TokenNumber</th>
+                        <th>TokenGenerator</th>
                         </tr>
                         <tbody>
                             <tr th:each="s:${cinfo}">
-                                <td th:text="${s.vehiclename}"></td>
-                                <td th:text="${s.color}"></td>
+                                <td th:text="${s.plateNumber}"></td>
                                 <td th:text="${s.modelNumber}"></td>
                                 <td th:text="${s.EngineNumber}"></td>
                                 <td th:text="${s.ChasesNumber}"></td>
+                                <td th:text="${s.Color}"></td>
+                                <td th:text="${s.myrandomstring}"></td>
+                                <td>
+                                    <button type="button" class="btn btn-outline-primary" th:if="${s.myrandomstring!=null}">Generate</button>
+                                    <button th:if="${s.myrandomstring==null}">Generated</button>
+                                </td>
+                                   
+                                </div>
                             </tr>
                         </tbody>
                 </thead>
