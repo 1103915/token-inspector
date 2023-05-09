@@ -5,16 +5,16 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.coffeeshop.coffee_shop_employees.Model.CarRegistraionDetails;
+import com.coffeeshop.coffee_shop_employees.Model.CarRegistrationDetails;
 
 @Service
 public class CarRegistrationService {
-    List<CarRegistraionDetails> details = new ArrayList<>();
+    List<CarRegistrationDetails> details = new ArrayList<>();
 
-   public void AddDetails(CarRegistraionDetails cardetails){
+   public void AddDetails(CarRegistrationDetails cardetails){
         details.add(cardetails);
     }
-    public List<CarRegistraionDetails> getdetails(){
+    public List<CarRegistrationDetails> getdetails(){
         return details;
     }
 }

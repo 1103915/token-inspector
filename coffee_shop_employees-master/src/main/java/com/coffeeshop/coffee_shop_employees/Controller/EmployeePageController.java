@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.coffeeshop.coffee_shop_employees.Model.CarRegistraionDetails;
+import com.coffeeshop.coffee_shop_employees.Model.CarRegistrationDetails;
 import com.coffeeshop.coffee_shop_employees.Model.EmployeeDetails;
 import com.coffeeshop.coffee_shop_employees.Service.CarRegistrationService;
 import com.coffeeshop.coffee_shop_employees.Service.EmployeeService;
@@ -74,20 +74,23 @@ public class EmployeePageController {
     @GetMapping("/car")
     public String car(Model model) {
         
-        model.addAttribute("info",new CarRegistraionDetails());
+        model.addAttribute("info",new CarRegistrationDetails());
         return "CarRegistration";
     }
     @PostMapping("/postcardata")
-    public String postdata(@ModelAttribute CarRegistraionDetails detail){
+    public String postdata(@ModelAttribute CarRegistrationDetails detail){
         thirdService.AddDetails(detail);
         return "redirect:/CarInfo";
     }
     @GetMapping("/CarInfo")
+    
     public ModelAndView showCarInfo() {
         ModelAndView m1 = new ModelAndView("CarInformation");
         m1.addObject("cinfo", thirdService.getdetails());
         return m1;
+        
     }
+    
     @GetMapping("/test")
     public String testfile(){
         return "test";
