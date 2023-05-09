@@ -3,7 +3,7 @@ package com.coffeeshop.coffee_shop_employees.Model;
 import org.springframework.stereotype.Component;
 
 @Component
-public class CarRegistraionDetails {
+public class CarRegistrationDetails {
 
         private String plateNumber;
         private String engineNumber;
