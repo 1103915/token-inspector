@@ -29,17 +29,24 @@
         <table id="example" class="table table-striped" style="width:100%">
                 <thead>
                     <tr>
-                        <th>plateNumber</th>
+                        <th>VehicleName</th>
+                        <th>Color</th>
                         <th>modelNumber</th>
                         <th>EngineNumber</th>
                         <th>ChasesNumber</th>
+                        <th>PlateNumber</th>
+
                         </tr>
                         <tbody>
                             <tr th:each="s:${cinfo}">
-                                <td th:text="${s.plateNumber}"></td>
+                                <td th:text="${s.vehiclename}"></td>
+                                <td th:text="${s.color}"></td>
                                 <td th:text="${s.modelNumber}"></td>
+
                                 <td th:text="${s.EngineNumber}"></td>
                                 <td th:text="${s.ChasesNumber}"></td>
+                                <td th:text="${s.plateNumber}"></td>
+
                             </tr>
                         </tbody>
                 </thead>

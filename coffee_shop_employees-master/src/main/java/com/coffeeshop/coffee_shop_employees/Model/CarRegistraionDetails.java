@@ -5,13 +5,20 @@ import org.springframework.stereotype.Component;
 @Component
 public class CarRegistraionDetails {
 
+        private String vehiclename;
         private String plateNumber;
         private String engineNumber;
         private String modelNumber;
         private String color;
         private String ChasesNumber;
     
-        
+        public String getVehiclename() {
+            return vehiclename;
+        }
+
+        public void setVehiclename(String vehiclename) {
+            this.vehiclename = vehiclename;
+        }
 
         public String getChasesNumber() {
             return ChasesNumber;
