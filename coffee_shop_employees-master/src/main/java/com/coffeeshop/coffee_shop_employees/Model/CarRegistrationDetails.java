@@ -1,43 +1,17 @@
 package com.coffeeshop.coffee_shop_employees.Model;
 
-import java.util.Optional;
-import java.util.Random;
-
-
 import org.springframework.stereotype.Component;
 
 @Component
-public class CarRegistrationDetails {
+public class CarRegistraionDetails {
 
         private String plateNumber;
         private String engineNumber;
         private String modelNumber;
         private String color;
         private String ChasesNumber;
-        Random random = new Random();
-        int max = 1000;
-        int min = 1;
-        private int TokenNumber = random.nextInt((max-min)+1);
-        private String myrandomstring=null;
+    
         
-        
-
-        public String getMyrandomstring() {
-            return myrandomstring;
-        }
-
-        public void setMyrandomstring(String Myrandomstring) {
-            Myrandomstring = Integer.toString(TokenNumber);
-            this.myrandomstring = Myrandomstring;
-        }
-
-        public int getTokenNumber() {
-            return TokenNumber;
-        }
-
-        public void setTokenNumber(int tokenNumber) {
-            TokenNumber = tokenNumber;
-        }
 
         public String getChasesNumber() {
             return ChasesNumber;
