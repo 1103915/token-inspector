@@ -6,24 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Token Page</title>
 </head>
+<style>
+
+section {
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+label {
+
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="text"],
+input[type="number"],
+input[type="number"] 
+input[type="text"] 
+{
+  padding: 5px;
+  border: 1px solid #7a0909;
+  border-radius: 3px;
+  width: 30%;
+  margin-bottom: 10px;
+}
+
+input[type="submit"] {
+  background-color: #333;
+  color: #c5b4b4;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+</style>
+
 <body>
-    <table border="1">
-        <tr>
-            <td>Name</td>
-            <td>father Name</td>
-            <td>CNIC Number</td>
-            <td>Phone Number</td>
-            <td>Car Plate Number</td>
+   
+      <section>
+        <h2>Token Details</h2>
+        
+        <form>
+          <label for="make">User Name:</label>
+          <input type="text" id="useername" name="username">
+          <label for="model">Father Name:</label>
+          <input type="text" id="father name" name="father name">
+          <label for="year">Cnic Number:</label>
+          <input type="number" id="cnic number" name="cnic number">
+          <label for="year">Phone Number:</label>
+          <input type="number" id="phone number" name="phone number">
+          <label for="year">Car Plate Number:</label>
+          <input type="text" id="plate number" name="plate number"><br>
 
-        </tr>
-        <tr>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-            <td><input type="number"></td>
-            <td><input type="number"></td>
-            <td><input type="text"></td>
+          <input type="submit" value="token">
+        </form>
+      </section>
+    </main>
 
-        </tr>
-    </table>
 </body>
 </html>
