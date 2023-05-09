@@ -12,29 +12,24 @@
 <div class="formstyle">
 <form th:action="postcardata" method="post" th:object="${info}">
     <div class="input-1">
-        <label>Vehicle Name:</label><br>
-        <input type="text"   th:field="${info.vehiclename}"><br>
-    </div>
-    <div class="input-2">
-        <label for="color">Colour:</label><br>
-        <input type="text"  id="color" name="color" placeholder="Enter Colour" th:field="${info.color}"><br>
-    <div class="input-3">
-        <label for="modelNumber">Model:</label><br>
-        <input type="text"  id="modelNumber" name="modelNumber" placeholder="Enter Model Number" th:field="${info.modelNumber}"><br>
-    </div>
-    <div class="input-4">
-        <label for="engineNumber">Engine Number:</label><br>
-        <input type="text"  id="engineNumber" name="engineNumber" placeholder="Enter Engine Number" th:field="${info.engineNumber}"><br>
-    </div> 
-    <div class="input-5">
-        <label for="ChasesNumber">Chases Number:</label><br>
-        <input type="text"  id="ChasesNumber" name="ChasesNumber" placeholder="Enter Chases Number" th:field="${info.ChasesNumber}"><br>
-    </div>
-    <div class="input-6">
-        <label>Plate Number:</label><br>
+        <label>Car Plate Number:</label><br>
         <input type="text"   th:field="${info.plateNumber}"><br>
     </div>
-    
+    <div class="input-2">
+        <label for="modelNumber">Car Model Number:</label><br>
+        <input type="text"  id="modelNumber" name="modelNumber" placeholder="Enter Model Number" th:field="${info.modelNumber}"><br>
+    </div>
+    <div class="input-3">
+        <label for="engineNumber">Car Engine Number:</label><br>
+        <input type="text"  id="engineNumber" name="engineNumber" placeholder="Enter Engine Number" th:field="${info.engineNumber}"><br>
+    </div> 
+    <div class="input-4">
+        <label for="ChasesNumber">Car Chases Number:</label><br>
+        <input type="text"  id="ChasesNumber" name="ChasesNumber" placeholder="Enter Chases Number" th:field="${info.ChasesNumber}"><br>
+    </div>
+    <div class="input-5">
+        <label for="color">Car Colour:</label><br>
+        <input type="text"  id="color" name="color" placeholder="Enter Colour" th:field="${info.color}"><br>
     </div>
     <input type="Submit" value="Submit">
 </form>  
