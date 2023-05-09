@@ -34,6 +34,9 @@
                         <th>modelNumber</th>
                         <th>EngineNumber</th>
                         <th>ChasesNumber</th>
+                        <th>PlateNumber</th>
+                        <th>TokenNumber</th>
+
                         </tr>
                         <tbody>
                             <tr th:each="s:${cinfo}">
@@ -41,7 +44,13 @@
                                 <td th:text="${s.color}"></td>
                                 <td th:text="${s.modelNumber}"></td>
                                 <td th:text="${s.EngineNumber}"></td>
-                                <td th:text="${s.ChasesNumber}"></td>
+                                <td th:text="${s.chasesNumber}"></td>
+                                <td th:text="${s.plateNumber}"></td>
+                                <td>
+                                    <span th:if="${s.tokenNumber != null}" th:text="${s.tokenNumber}"></span>
+                                    <a th:href="@{'/generateTokenNumber/'+${s.id}}" th:unless="${s.tokenNumber != null}" type="button" class="btn btn-primary">Generate</a>
+                                </td>
+
                             </tr>
                         </tbody>
                 </thead>
