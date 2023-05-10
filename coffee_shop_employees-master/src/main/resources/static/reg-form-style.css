@@ -11,19 +11,23 @@
   /* -webkit-mask-position-y: 6px; */
   line-height: normal;
 }
-
+.mainform{
+  padding-left: 92px;
+  padding-right: 68px;
+}
 #submit{/* margin: 35px; *//* padding: 37px; */position: 44px;left: 12px;justify-content: center;}
 input , select{border: outset;}
 body{
   font-family: roboto,"Noto Sans Myanmar UI",arial,sans-serif;
-  padding-left: 92px;
-  padding-right: 68px;
+ 
   background-color: #fafafa;
   }
 h1{
-    padding-left: 335px;
-    margin-left: 119px;
-    /* margin-top: 14px; */
+    /* padding-left: 310px; */
+    /* margin-left: 104px; */
+    /* padding-right: 24px; */
+    /* margin-top: 0; */
+    /* padding: 34px; */
     justify-content: center;
     padding-top: 10px;
     font-family: roboto,"Noto Sans Myanmar UI",arial,sans-serif;
@@ -37,4 +41,68 @@ h1{
   padding-bottom: 0px;
   padding-left: 8px;
   padding-right: 10px;
+}
+.HomePageNavigationBar{
+  background-color: #8d8282;
+  height: 34px;
+  border-radius: 5px;
+  margin: -16px -6px;
+}
+
+.Navigation li{
+   float: left;
+   list-style: none;
+   margin: 9px 6px;
+}
+.Navigation li a{
+   padding: 1px 5px;
+   color: bisque;
+   text-transform: uppercase;
+   text-decoration: none;
+   
+   
+}
+.Navigation li a:hover{
+   color: rgb(168, 59, 127);
+   background:
+   /* Gradient #1 */
+   linear-gradient(90deg, #ccacac 50%, rgb(var(--c)) 0) calc(100% - var(--_i, 0) * 100%) / 200%,
+   /* Gradient #2 */
+   linear-gradient(rgb(var(--c)) 0 0) 0% 100% / calc(var(--_i, 0) * 100%) no-repeat,
+   /* Background Color */
+   rgb(var(--c)/ var(--_i, 0));
+ -webkit-background-clip: text, padding-box, padding-box;
+         background-clip: text, padding-box, padding-box;
+ --_t: calc(var(--_i,0)*.5s);
+ transition: 
+   var(--_t),
+   color calc(.5s - var(--_t)) var(--_t),
+   background-color calc(.5s - var(--_t)) var(--_t);
+}
+
+.footer{
+	max-width: 935px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 40px 0;
+	display: flex;
+	justify-content: space-between;
+	padding-top: 65px;
+}
+
+.footer .links ul li{
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.footer .links ul li a{
+	color: #003569;
+	font-size: 12px;
+}
+
+.footer .copyright{
+	color: #999;	
+}
+.copyright{
+    padding-top: 18px;
 }

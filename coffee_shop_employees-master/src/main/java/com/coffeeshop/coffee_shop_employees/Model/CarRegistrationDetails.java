@@ -1,8 +1,5 @@
 package com.coffeeshop.coffee_shop_employees.Model;
 
-import java.util.Optional;
-import java.util.Random;
-
 
 import org.springframework.stereotype.Component;
 
