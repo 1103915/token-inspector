@@ -2,11 +2,19 @@ package com.coffeeshop.coffee_shop_employees.Model;
 
 import org.springframework.stereotype.Component;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 
-@Component
 
-public class EmployeeDetails {
+@Entity
+
+public class UserDetails {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
     private String name;
     private int age;
     private String dob;

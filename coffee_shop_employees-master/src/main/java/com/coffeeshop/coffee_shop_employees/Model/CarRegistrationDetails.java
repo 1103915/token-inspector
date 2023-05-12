@@ -3,8 +3,15 @@ package com.coffeeshop.coffee_shop_employees.Model;
 
 import org.springframework.stereotype.Component;
 
-@Component
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class CarRegistrationDetails {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String vehiclename;
     private String plateNumber;
