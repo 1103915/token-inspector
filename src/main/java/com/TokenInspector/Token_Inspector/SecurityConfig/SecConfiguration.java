@@ -34,7 +34,7 @@ public class SecConfiguration {
    public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
         return httpSecurity.authorizeHttpRequests(
                         requests -> requests.requestMatchers(toH2Console()).permitAll()
-                                .requestMatchers(HttpMethod.GET,"/Registrationform", "/SignInPage", "/css/**","/images/**","/js/**").permitAll()
+                                .requestMatchers(HttpMethod.GET,"/Registrationform", "/SignInPage", "../css/LoginPageStyle","/images/**","/js/**").permitAll()
                                 .anyRequest()
                                 .authenticated()
                                 

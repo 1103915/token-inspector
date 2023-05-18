@@ -13,7 +13,6 @@ import com.TokenInspector.Token_Inspector.Model.CarRegistrationDetails;
 import com.TokenInspector.Token_Inspector.Service.CarRegistrationService;
 import com.TokenInspector.Token_Inspector.Service.UserService;
 import com.TokenInspector.Token_Inspector.Service.SignInPageService;
-import com.TokenInspector.Token_Inspector.Model.RegistrationDetails;
 import com.TokenInspector.Token_Inspector.Model.UserInfo;
 
 @Controller
