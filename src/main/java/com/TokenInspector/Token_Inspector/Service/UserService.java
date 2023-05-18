@@ -1,18 +1,16 @@
-package com.coffeeshop.coffee_shop_employees.Service;
+package com.TokenInspector.Token_Inspector.Service;
 
-import java.util.ArrayList;
-import java.util.List;
+
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import org.springframework.stereotype.Service;
-import com.coffeeshop.coffee_shop_employees.Model.UserDetails;
+
+import com.TokenInspector.Token_Inspector.Model.UserInfo;
+
 
 
 @Repository
-public interface UserService extends JpaRepository<UserDetails , Long>{
-    
-
+public interface UserService extends JpaRepository<UserInfo , Long>{
    /*
    List<UserDetails> storage = new ArrayList<>();
     public List<UserDetails> GetDetails(){
@@ -21,6 +19,5 @@ public interface UserService extends JpaRepository<UserDetails , Long>{
     public void AddDetails(UserDetails model){
         storage.add(model);
     } */
-   
-    
+    UserInfo findByUsername(String myusername);
 }

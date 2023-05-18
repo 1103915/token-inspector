@@ -1,4 +1,4 @@
-package com.coffeeshop.coffee_shop_employees.Service;
+package com.TokenInspector.Token_Inspector.Service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,11 +7,11 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
-import com.coffeeshop.coffee_shop_employees.Model.CarRegistrationDetails;
+import com.TokenInspector.Token_Inspector.Model.CarRegistrationDetails;
 
 @Repository
 public interface CarRegistrationService extends JpaRepository<CarRegistrationDetails,Long>{
-    List<CarRegistrationDetails> details = new ArrayList<>();
+    //List<CarRegistrationDetails> details = new ArrayList<>();
 /*
     public void AddDetails(CarRegistrationDetails cardetails) {
         cardetails.setId(details.size()+1);
