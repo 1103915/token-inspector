@@ -1,7 +1,4 @@
-package com.coffeeshop.coffee_shop_employees.Model;
-
-
-import org.springframework.stereotype.Component;
+package com.TokenInspector.Token_Inspector.Model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

@@ -1,13 +1,13 @@
-package com.coffeeshop.coffee_shop_employees;
+package com.TokenInspector.Token_Inspector;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CoffeeShopEmployeesApplication {
+public class TokenInspectorApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CoffeeShopEmployeesApplication.class, args);
+		SpringApplication.run(TokenInspectorApplication.class, args);
 	}
 
 }

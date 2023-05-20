@@ -1,4 +1,4 @@
-package com.coffeeshop.coffee_shop_employees.Controller;
+package com.TokenInspector.Token_Inspector.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -9,21 +9,20 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.coffeeshop.coffee_shop_employees.Model.CarRegistrationDetails;
-import com.coffeeshop.coffee_shop_employees.Model.UserDetails;
-import com.coffeeshop.coffee_shop_employees.Service.CarRegistrationService;
-import com.coffeeshop.coffee_shop_employees.Service.UserService;
-import com.coffeeshop.coffee_shop_employees.Service.SignInPageService;
-import com.coffeeshop.coffee_shop_employees.Model.SignInPage;
+import com.TokenInspector.Token_Inspector.Model.CarRegistrationDetails;
+import com.TokenInspector.Token_Inspector.Service.CarRegistrationService;
+import com.TokenInspector.Token_Inspector.Service.UserService;
+import com.TokenInspector.Token_Inspector.Service.SignInPageService;
+import com.TokenInspector.Token_Inspector.Model.UserInfo;
 
 @Controller
 public class EmployeePageController {
-    @Autowired
-    UserService firstService;
+
+private UserService firstService;
     @Autowired
     SignInPageService secondservice;
-    @Autowired
-    CarRegistrationService thirdService;
+
+private CarRegistrationService thirdService;
 
     @GetMapping("/home")
     public ModelAndView homepage() {
@@ -34,24 +33,24 @@ public class EmployeePageController {
 
     @GetMapping("/Registrationform")
     public String form(Model model) {
-        model.addAttribute("loginkey", new UserDetails());
+        model.addAttribute("loginkey", new UserInfo());
         return "reg-form";
     }
 
     @PostMapping("/pdata")
-    public String postdata(@ModelAttribute UserDetails firstdetail) {
+    public String postdata(@ModelAttribute UserInfo firstdetail) {
         firstService.save(firstdetail);
         return "redirect:/SignInPage";
     }
 
     @GetMapping("/SignInPage")
     public String page(Model model) {
-        model.addAttribute("LoginKey", new SignInPage());
+        model.addAttribute("LoginKey", new UserInfo());
         
         return "LoginPage";
     }
 
-    @GetMapping("/Page")
+    @GetMapping("/homepage")
     public String getreq() {
         return "redirect:/home";
     }
@@ -99,7 +98,7 @@ public class EmployeePageController {
         
     }
 
-    @GetMapping("/generateTokenNumber/{cardId}")
+    @GetMapping("/generateTokenNumber/{carId}")
     public String generateTokenNumber(@PathVariable long carId) {
         int min=1000;
         int max=2000;

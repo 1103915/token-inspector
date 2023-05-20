@@ -1,4 +1,4 @@
-package com.coffeeshop.coffee_shop_employees.Model;
+package com.TokenInspector.Token_Inspector.Model;
 
 import org.springframework.stereotype.Component;
 
