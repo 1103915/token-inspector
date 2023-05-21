@@ -11,31 +11,12 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.TokenInspector.Token_Inspector.Model.CarRegistrationDetails;
 import com.TokenInspector.Token_Inspector.Service.CarRegistrationService;
-import com.TokenInspector.Token_Inspector.Service.SignInPageService;
 
 @Controller
-public class EmployeePageController {
-
+public class CarRegController {
     @Autowired
-    SignInPageService secondservice;
-
-    private CarRegistrationService thirdService;
-
-    @GetMapping("/")
-    String home() {
-        return "HomePage";
-    }
-
-    @GetMapping("/about")
-    public String aboutpage() {
-        return "AboutPage";
-    }
-
-    @GetMapping("/token")
-    public String token() {
-        return "TokenPage";
-    }
-
+    CarRegistrationService thirdService;
+    
     @GetMapping("/car")
     public String car(Model model) {
 
@@ -68,10 +49,5 @@ public class EmployeePageController {
         this.thirdService.save(car);
         /*thirdService.generateTokenNumber(cardId);*/
         return "redirect:/CarInfo";
-    }
-
-    @GetMapping("/test")
-    public String testfile() {
-        return "test";
     }
 }
