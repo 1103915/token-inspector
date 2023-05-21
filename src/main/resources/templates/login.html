@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<html
+  lang="en"
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:th="http://www.thymeleaf.org"
+>
 <head>
 	<meta charset="UTF-8">
 	<title>Login - Token Inspector</title>
@@ -13,9 +17,16 @@
 			<div class="logo">
 				<img src="images/instagram.png" alt="instagram" style="width: 175px;">
 			</div>
+
+			<div th:if="${param.error}" class="alert alert-danger" role="alert">
+				Unable to login. Check your username and password.
+			</div>
+			<div th:if="${param.logout}" class="alert alert-success" role="alert">
+				You have been successfully logged out
+			</div>
 			
 			<!-- form start -->
-			<form th:action="@{/login}" method="post" class="form" th:object="${loginForm}">
+			<form th:action="@{/login}" method="POST" class="form" th:object="${loginForm}">
 				<div class="input_field">
 					<input type="text" placeholder="Phone number, username, or email" th:field="*{username}" class="input">
 				</div>

@@ -20,7 +20,7 @@
           <nav class="Navigation">
             <ul>
               <li><a th:href="@{/register}" id="reg">Register</a></li>
-              <li><a th:href="@{/home}">home</a></li>
+              <li><a th:href="@{/}">home</a></li>
               <li><a th:href="@{/about}">About Us</a></li>
               <li><a th:href="@{/car}">Vehicle Registration</a></li>
               <li><a th:href="@{/login}">Login</a></li>
@@ -34,6 +34,15 @@
     <div class="mainform">
       <div class="RegistrationForm">
         <form th:action="@{/register}" th:object="${registerForm}" method="post">
+          <label for="username">Username:&ensp;</label><br />
+          <input
+            type="text"
+            th:field="*{username}"
+            id="username"
+            value="username"
+            placeholder="Enter Your Username"
+          /><br />
+
           <label for="Name">Name:&ensp;</label><br />
           <input
             type="text"

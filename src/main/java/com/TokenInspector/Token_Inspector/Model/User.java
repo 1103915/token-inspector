@@ -5,6 +5,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -13,7 +15,11 @@ import java.util.Collection;
 
 @Entity
 @Table(name = "Users")
+@AllArgsConstructor
+@NoArgsConstructor
 public class User implements UserDetails {
+    private static final long serialVersionUID = 1L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -25,18 +31,6 @@ public class User implements UserDetails {
     private String password;
     private String contactnumber;
     private String gender;
-
-    public User(long id, String name, String dob, String email, String username, String password, String contactnumber,
-            String gender) {
-        this.id = id;
-        this.name = name;
-        this.dob = dob;
-        this.email = email;
-        this.username = username;
-        this.password = password;
-        this.contactnumber = contactnumber;
-        this.gender = gender;
-    }
 
     public long getId() {
         return id;

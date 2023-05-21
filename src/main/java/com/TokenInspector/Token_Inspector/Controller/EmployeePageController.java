@@ -12,37 +12,18 @@ import org.springframework.web.servlet.ModelAndView;
 import com.TokenInspector.Token_Inspector.Model.CarRegistrationDetails;
 import com.TokenInspector.Token_Inspector.Service.CarRegistrationService;
 import com.TokenInspector.Token_Inspector.Service.SignInPageService;
-import com.TokenInspector.Token_Inspector.Model.User;
 
 @Controller
 public class EmployeePageController {
 
-
     @Autowired
     SignInPageService secondservice;
 
-private CarRegistrationService thirdService;
+    private CarRegistrationService thirdService;
 
-    @GetMapping("/home")
-    public ModelAndView homepage() {
-        ModelAndView m1 = new ModelAndView("HomePage");
-        return m1;
-    }
-
-    @PostMapping("/pdata")
-    public String postdata(@ModelAttribute User firstdetail) {
-        return "redirect:/SignInPage";
-    }
-
-    @GetMapping("/homepage")
-    public String getreq() {
-        return "redirect:/home";
-    }
-
-    @PostMapping("/Home")
-    public String HomePost() {
-        return "redirect:/home";
-
+    @GetMapping("/")
+    String home() {
+        return "HomePage";
     }
 
     @GetMapping("/about")
