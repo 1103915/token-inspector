@@ -11,14 +11,13 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.TokenInspector.Token_Inspector.Model.CarRegistrationDetails;
 import com.TokenInspector.Token_Inspector.Service.CarRegistrationService;
-import com.TokenInspector.Token_Inspector.Service.UserService;
 import com.TokenInspector.Token_Inspector.Service.SignInPageService;
-import com.TokenInspector.Token_Inspector.Model.UserInfo;
+import com.TokenInspector.Token_Inspector.Model.User;
 
 @Controller
 public class EmployeePageController {
 
-private UserService firstService;
+
     @Autowired
     SignInPageService secondservice;
 
@@ -27,27 +26,12 @@ private CarRegistrationService thirdService;
     @GetMapping("/home")
     public ModelAndView homepage() {
         ModelAndView m1 = new ModelAndView("HomePage");
-        m1.addObject(firstService.findAll());
         return m1;
     }
 
-    @GetMapping("/Registrationform")
-    public String form(Model model) {
-        model.addAttribute("loginkey", new UserInfo());
-        return "reg-form";
-    }
-
     @PostMapping("/pdata")
-    public String postdata(@ModelAttribute UserInfo firstdetail) {
-        firstService.save(firstdetail);
+    public String postdata(@ModelAttribute User firstdetail) {
         return "redirect:/SignInPage";
-    }
-
-    @GetMapping("/SignInPage")
-    public String page(Model model) {
-        model.addAttribute("LoginKey", new UserInfo());
-        
-        return "LoginPage";
     }
 
     @GetMapping("/homepage")
@@ -59,11 +43,6 @@ private CarRegistrationService thirdService;
     public String HomePost() {
         return "redirect:/home";
 
-    }
-
-    @GetMapping("/Sign-up")
-    public String SignupFromLogin() {
-        return "redirect:/Registrationform";
     }
 
     @GetMapping("/about")

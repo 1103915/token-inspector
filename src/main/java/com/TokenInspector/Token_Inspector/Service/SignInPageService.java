@@ -6,15 +6,15 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.TokenInspector.Token_Inspector.Model.UserInfo;
+import com.TokenInspector.Token_Inspector.Model.User;
 @Service
 public class SignInPageService{
    
-    List<UserInfo> storage = new ArrayList<>();
-    public List<UserInfo> GetDetails(){
+    List<User> storage = new ArrayList<>();
+    public List<User> GetDetails(){
         return this.storage;
     }
-    public void AddDetails(UserInfo model){
+    public void AddDetails(User model){
         storage.add(model);
     }
 }
