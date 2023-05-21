@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.TokenInspector.Token_Inspector.Model.CarRegistrationDetails;
-import com.TokenInspector.Token_Inspector.Service.CarRegistrationService;
+import com.TokenInspector.Token_Inspector.Repository.CarRepository;
 
 @Controller
 public class CarRegController {
     @Autowired
-    CarRegistrationService thirdService;
+    CarRepository thirdService;
     
     @GetMapping("/car")
     public String car(Model model) {
