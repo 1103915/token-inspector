@@ -12,7 +12,6 @@ import org.springframework.web.servlet.ModelAndView;
 import com.TokenInspector.Token_Inspector.Model.CarRegistrationDetails;
 import com.TokenInspector.Token_Inspector.Service.CarRegistrationService;
 import com.TokenInspector.Token_Inspector.Service.SignInPageService;
-import com.TokenInspector.Token_Inspector.Model.User;
 
 @Controller
 public class EmployeePageController {
@@ -26,23 +25,6 @@ public class EmployeePageController {
     @GetMapping("/")
     String home() {
         return "HomePage";
-    }
-
-    @GetMapping("/home")
-    public ModelAndView homepage() {
-        ModelAndView m1 = new ModelAndView("HomePage");
-        return m1;
-    }
-
-    @GetMapping("/homepage")
-    public String getreq() {
-        return "redirect:/home";
-    }
-
-    @PostMapping("/Home")
-    public String HomePost() {
-        return "redirect:/home";
-
     }
 
     @GetMapping("/about")
