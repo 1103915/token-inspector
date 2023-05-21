@@ -21,17 +21,17 @@ public class EmployeePageController {
     @Autowired
     SignInPageService secondservice;
 
-private CarRegistrationService thirdService;
+    private CarRegistrationService thirdService;
+
+    @GetMapping("/")
+    String home() {
+        return "HomePage";
+    }
 
     @GetMapping("/home")
     public ModelAndView homepage() {
         ModelAndView m1 = new ModelAndView("HomePage");
         return m1;
-    }
-
-    @PostMapping("/pdata")
-    public String postdata(@ModelAttribute User firstdetail) {
-        return "redirect:/SignInPage";
     }
 
     @GetMapping("/homepage")

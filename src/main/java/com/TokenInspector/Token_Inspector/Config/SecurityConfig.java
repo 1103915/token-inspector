@@ -42,9 +42,8 @@ public class SecurityConfig {
                         .permitAll()
                         .anyRequest()
                         .authenticated())
-                .formLogin(form -> form.loginPage("/login").usernameParameter("email").permitAll()
-                        .defaultSuccessUrl("/dashboard", true))
-
+                .formLogin(form -> form.loginPage("/login").permitAll()
+                        .defaultSuccessUrl("/", true))
                 .logout(LogoutConfigurer::permitAll)
                 .headers(headers -> headers.frameOptions().disable())
                 .csrf(csrf -> csrf.ignoringRequestMatchers(toH2Console()))
