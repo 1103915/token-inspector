@@ -27,10 +27,10 @@ public class CarRegController {
     @PostMapping("/postcardata")
     public String postdata(@ModelAttribute CarRegistrationDetails detail){
         thirdService.save(detail);
-        return "redirect:/CarInfo";
+        return "redirect:/carinfo";
     }
 
-    @GetMapping("/CarInfo")
+    @GetMapping("/carinfo")
     
     public ModelAndView showCarInfo() {
         ModelAndView m1 = new ModelAndView("CarInformation");
@@ -48,6 +48,6 @@ public class CarRegController {
         car.setTokenNumber(tokenNumber);
         this.thirdService.save(car);
         /*thirdService.generateTokenNumber(cardId);*/
-        return "redirect:/CarInfo";
+        return "redirect:/carinfo";
     }
 }
