@@ -16,11 +16,11 @@
         <table id="RegisteredCars" class="table table-striped" style="width:100%">
                 <thead>
                     <tr>
-                        <th>plateNumber</th>
-                        <th>modelNumber</th>
+                        <th>PlateNumber</th>
+                        <th>ModelNumber</th>
                         <th>EngineNumber</th>
                         <th>ChasesNumber</th>
-                        <th>PlateNumber</th>
+                        <th>Color</th>
                         <th>TokenNumber</th>
                       
                         </tr>
@@ -30,7 +30,7 @@
                                 <td th:text="${s.modelNumber}"></td>
                                 <td th:text="${s.EngineNumber}"></td>
                                 <td th:text="${s.chasesNumber}"></td>
-                                <td th:text="${s.plateNumber}"></td>
+                                <td th:text="${s.color}"></td>
                                 <td>
                                     <span th:if="${s.tokenNumber != null}" th:text="${s.tokenNumber}"></span>
                                     <a th:href="@{'/generateTokenNumber/'+${s.id}}" th:unless="${s.tokenNumber != null}" type="button" class="btn btn-primary">Generate</a>
