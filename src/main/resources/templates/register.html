@@ -15,18 +15,8 @@
   </head>
   <body>
     <nav>
-      <div class="HomePageNavigationBar">
-        <header>
-          <nav class="Navigation">
-            <ul>
-              <li><a th:href="@{/register}" id="reg">Register</a></li>
-              <li><a th:href="@{/}">home</a></li>
-              <li><a th:href="@{/about}">About Us</a></li>
-              <li><a th:href="@{/car}">Vehicle Registration</a></li>
-              <li><a th:href="@{/login}">Login</a></li>
-            </ul>
-          </nav>
-        </header>
+      <header th:insert="~{fragments/navbar.html}"></header>
+    
       </div>
     </nav>
     <h1 id="create"><b>Create An Account</b></h1>
