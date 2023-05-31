@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.TokenInspector.Token_Inspector.Model.CarRegistrationDetails;
@@ -31,12 +32,14 @@ public class CarRegController {
     }
 
     @GetMapping("/carinfo")
-    
-    public ModelAndView showCarInfo() {
+    public ModelAndView showCarInfo(@RequestParam(required = false) String plateNumber) {
         ModelAndView m1 = new ModelAndView("CarInformation");
-        m1.addObject("cinfo", thirdService.findAll());
+        if (plateNumber != null) {
+            m1.addObject("cinfo", thirdService.findCarRegistrationDetailsByPlateNumber(plateNumber));
+        } else {
+            m1.addObject("cinfo", thirdService.findAll());
+        }
         return m1;
-        
     }
 
     @GetMapping("/generateTokenNumber/{carId}")
